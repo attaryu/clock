@@ -1,0 +1,204 @@
+@font-face {
+	src: url('font/Poppins-Semibold.ttf');
+	font-family: 'Poppins SemiBold';
+}
+
+@font-face {
+	src: url('font/Poppins-Bold.ttf');
+	font-family: 'Poppins Bold';
+}
+
+@font-face {
+	src: url('font/Montserrat-Bold.ttf');
+	font-family: 'Montserrat Bold';
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	font-size: calc(21px + 0.390625vw);
+	background-color: rgb(220 220 220);
+}
+
+.container {
+	width: 65%;
+	height: 60vh;
+	display: grid;
+	grid-template-rows: 3fr .8fr;
+	place-items: center;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0 15px 40px -10px rgba(0 0 0 / .4);
+	overflow: hidden;
+}
+
+h2 {
+	margin: auto;
+	font: 2.5rem Montserrat Bold;
+	color: rgb(70 70 70);
+	transition: .3s ease;
+}
+
+.theButton {
+	all: unset;
+	width: clamp(40px, 30%, 200px);
+	height: 50%;
+	padding: 0 10px;
+	font: 1rem Poppins SemiBold;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgb(50 50 50);
+	color: white;
+	border-radius: 20px;
+	transition: .2s ease;
+}
+
+.theButton:hover {
+	background-color: rgb(110 110 110);
+	cursor: pointer;
+}
+
+/*------------------------------ JS -------------------------------*/
+
+.container-active {
+	grid-template-rows: 1fr;
+}
+
+.time-active {
+	font-size: 2em;
+}
+
+.clock-effect {
+	display: none;
+}
+
+/* Mobile 1 */
+@media (max-width: 360px) {
+	body {
+		font-size: calc(15px + 0.390625vw);
+	}
+
+	.container {
+		height: 30vh;
+		width: 77%;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	h2.time-active {
+		font-size: 1.7rem;
+	}
+
+	.theButton {
+		height: 60%;
+		font-size: .7rem;
+	}
+}
+
+/* mobile 2 */
+@media (min-width: 361px) and (max-width: 375px) {
+	body {
+		font-size: calc(18px + 0.390625vw);
+	}
+
+	.container {
+		height: 30vh;
+		width: 77%;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	h2.time-active {
+		font-size: 1.9rem;
+	}
+
+	.theButton {
+		height: 60%;
+		font-size: .7rem;
+	}
+}
+
+/* Pixel 2 */
+@media (min-width: 376px) and (max-width: 411px) {
+	body {
+		font-size: calc(18px + 0.390625vw);
+	}
+
+	.container {
+		height: 35vh;
+		width: 80%;
+	}
+
+	h2 {
+		font-size: 1.4rem;
+	}
+
+	h2.time-active {
+		font-size: 1.8rem;
+	}
+
+	.theButton {
+		height: 55%;
+		font-size: .8rem;
+	}
+}
+
+/* tablet */
+@media (min-width: 412px) and (max-width: 768px) {
+	body {
+		font-size: calc(18px + 0.390625vw);
+	}
+
+	.container {
+		height: 40vh;
+		width: 75%;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+	}
+
+	h2.time-active {
+		font-size: 3.3rem;
+	}
+
+	.theButton {
+		height: 52%;
+		font-size: 1.2rem;
+	}
+}
+
+/* laptop */
+@media (min-width: 769px) and (max-width: 1366px) and (orientation: landscape) {
+	body {
+		font-size: calc(20px + 0.390625vw);
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h2.time-active {
+		font-size: 3rem;
+	}
+}
+
+/* high res */
+@media (min-width: 1367px) and (max-width: 1920px) and (orientation: landscape) {
+	body {
+		font-size: calc(23px + 0.390625vw);
+	}
+
+
+}
